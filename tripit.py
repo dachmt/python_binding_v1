@@ -404,6 +404,9 @@ class TripIt(object):
     def get_car(self, id):
         return self._parse_command({ 'id' : id })
 
+    def get_parking(self, id):
+        return self._parse_command({ 'id' : id })
+
     def get_points_program(self, id):
         return self._parse_command({ 'id' : id })
 
@@ -446,6 +449,9 @@ class TripIt(object):
     def delete_car(self, id):
         return self._parse_command({ 'id' : id })
 
+    def delete_parking(self, id):
+        return self._parse_command({ 'id' : id })
+
     def delete_rail(self, id):
         return self._parse_command({ 'id' : id })
 
@@ -480,6 +486,9 @@ class TripIt(object):
         return self._parse_command({ 'id' : id , 'xml' : xml})
 
     def replace_car(self, id, xml):
+        return self._parse_command({ 'id' : id, 'xml' : xml })
+
+    def replace_parking(self, id, xml):
         return self._parse_command({ 'id' : id, 'xml' : xml })
 
     def replace_rail(self, id, xml):
